@@ -74,6 +74,49 @@
       <!-- <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Search by name, date of birth, identifier, physician, or test code"> -->
       <input class="appearance-none border-b border-grey-light w-full py-2 text-grey-darker leading-tight focus:outline-none" type="text" placeholder="Search by name, date of birth, identifier, physician, or test code">
     </div>
+
+    <div role="table" class = "container mx-auto py-6">
+      <table class="container mx-auto border-2 rounded-lg shadow py-6">
+        <tr class = "border-y-2">
+          <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2">Name</th>
+          <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2">Status</th>
+        </tr>
+        <tr class = "border-t-2 border-y-2 py-4">
+          <td class="py-4 px-4">
+            <div class="text-lg font-semibold pb-1">Paul DeVito</div>
+            <div class="text-xs text-grey-dark">06/18/1991</div>
+          </td>
+          <td class="border-t-2 px-2 text-center">
+            <div class="inline-block px-6 rounded-full bg-green-light text-green-darker font-semibold py-2">
+              Complete
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div role="table" class = "container mx-auto py-6">
+      <table class="border-2 shadow py-6">
+        <tr class = "border-y-2">
+          <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2 px-2">Name</th>
+          <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2 px-2">DOB</th>
+          <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2 px-2">Status</th>
+        </tr>
+        <tr class = "border-t-2 border-y-2 py-4">
+          <td class="py-4 px-4">
+            <div class="">Paul DeVito</div>
+          </td>
+          <td>
+            <div class="">06/18/1991</div>
+          </td>
+          <td class="border-t-2 px-2">
+            <div class="inline-flex px-6 rounded-full bg-green-light text-green-darker font-semibold py-2">
+              Complete
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -102,3 +145,4 @@
 @tailwind utilities;
 @import url("https://rsms.me/inter/inter-ui.css");
 </style>
+
