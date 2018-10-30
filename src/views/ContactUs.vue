@@ -15,14 +15,12 @@
 <script>
 import Navbar from "@/components/Navbar";
 import FilterSearch from "@/components/FilterSearch";
-import TreeView from "@/components/TreeView";
 
 export default {
     name: "reports",
     components: {
       Navbar,
-      FilterSearch,
-      TreeView
+      FilterSearch
     }
 }
 </script>
