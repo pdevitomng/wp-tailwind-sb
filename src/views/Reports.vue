@@ -96,8 +96,6 @@ export default {
   },
   methods: {
     handleSearchBarInput(passedSearchVal) {
-      console.log('blah');
-      console.log(passedSearchVal);
       this.searchVal = passedSearchVal;
     }
   }

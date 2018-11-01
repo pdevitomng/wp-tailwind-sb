@@ -8,7 +8,8 @@
       v-model="searchVal"
       :placeholder=searchPlaceholder 
       class="appearance-none border-b border-grey-light w-full py-2 text-grey-darker leading-tight focus:outline-none"
-      v-on:keyup.enter="$emit('search',searchVal)">
+      v-on:keyup.enter="$emit('search',searchVal)"
+      v-on:keyup.delete="$emit('search',searchVal)">
   </div>
 </template>
 
