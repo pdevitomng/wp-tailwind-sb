@@ -8,7 +8,7 @@
       v-model="searchVal"
       :placeholder=searchPlaceholder 
       class="appearance-none border-b border-grey-light w-full py-2 text-grey-darker leading-tight focus:outline-none"
-      v-on:keyup.enter.native="$emit('search',searchVal)">
+      v-on:keyup.enter="$emit('search',searchVal)">
   </div>
 </template>
 
@@ -18,7 +18,6 @@ export default {
   props: ["searchPlaceholder"],
   data() {
     return {
-      searchVal: "",
     }
   }
 }

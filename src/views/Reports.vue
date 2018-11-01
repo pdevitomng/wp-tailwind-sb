@@ -12,22 +12,10 @@
         class="mx-4" 
         :class="[status.name == selectedStatus ? 'font-medium border-b-2 border-green' : 'hover:cursor-pointer hover:opacity-50']" 
         @click= "selectedStatus=status.name">{{status.name}}</div>
-      <!-- <div 
-        v-for="status in StatusOptions" 
-        :key=status.index 
-        class="mx-4" 
-        @click= "selectedStatus=status.name">
-          {{status.name}}
-      </div> -->
     </div>
 
     <div role="search-bar" class="pt-8 pb-4 px-4">
-      <search-bar @search="searchVal" search-placeholder = "Search by name, date of birth, identifier, physician, or test code"></search-bar>
-      <!-- <div class="p-2">
-        <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
-      </div> -->
-      <!-- <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Search by name, date of birth, identifier, physician, or test code"> -->
-      <!-- <input class="appearance-none border-b border-grey-light w-full py-2 text-grey-darker leading-tight focus:outline-none" type="text" placeholder="Search by name, date of birth, identifier, physician, or test code"> -->
+      <search-bar @search="handleSearchBarInput($event)" search-placeholder = "Search by name, date of birth, identifier, physician, or test code"></search-bar>
     </div>
 
     <div class="py-6 px-4 font-bold">This will be the search val: {{searchVal}}</div>
@@ -94,16 +82,24 @@ export default {
       SearchBar
     },
     data() {
-    return {
-        selectedStatus: "ALL",
-        StatusOptions: [
-          {id: 1, name: 'ALL', selected: true},
-          {id: 2, name: 'ON HOLD', selected: false},
-          {id: 3, name: 'IN THE LAB', selected: false},
-          {id: 4, name: 'COMPLETE', selected: false},
-          {id: 5, name: 'REJECTED/CANCELLED', selected: false}
-        ]
-    }
+      return {
+          searchVal: "",
+          selectedStatus: "ALL",
+          StatusOptions: [
+            {id: 1, name: 'ALL', selected: true},
+            {id: 2, name: 'ON HOLD', selected: false},
+            {id: 3, name: 'IN THE LAB', selected: false},
+            {id: 4, name: 'COMPLETE', selected: false},
+            {id: 5, name: 'REJECTED/CANCELLED', selected: false}
+          ]
+      }
   },
+  methods: {
+    handleSearchBarInput(passedSearchVal) {
+      console.log('blah');
+      console.log(passedSearchVal);
+      this.searchVal = passedSearchVal;
+    }
+  }
 }
 </script>
