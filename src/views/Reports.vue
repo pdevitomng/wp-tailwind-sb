@@ -21,7 +21,7 @@
     <div class="py-6 px-4 font-bold">This will be the search val: {{searchVal}}</div>
     <div class="py-6 px-4 font-bold">This will be the filter val: {{selectedStatus}}</div>
 
-    <div role="table" class = "container mx-auto py-6">
+    <!-- <div role="table" class = "container mx-auto py-6">
     <table class="container mx-auto border-2 rounded-lg shadow py-6">
         <tr class = "border-y-2">
         <th class="text-left uppercase bg-grey-lighter font-semibold font-grey-dark py-2">Name</th>
@@ -62,42 +62,46 @@
         </td>
       </tr>
     </table>
-    </div>
+    </div> -->
     <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
+
+    <advanced-table></advanced-table>
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
+import AdvancedTable from "@/components/AdvancedTable";
 
 export default {
-    name: "reports",
-    components: {
-      Navbar,
-      SearchBar
-    },
-    data() {
-      return {
-          searchVal: "",
-          selectedStatus: "ALL",
-          StatusOptions: [
-            {id: 1, name: 'ALL', selected: true},
-            {id: 2, name: 'ON HOLD', selected: false},
-            {id: 3, name: 'IN THE LAB', selected: false},
-            {id: 4, name: 'COMPLETE', selected: false},
-            {id: 5, name: 'REJECTED/CANCELLED', selected: false}
-          ]
-      }
+  name: "reports",
+  components: {
+    Navbar,
+    SearchBar,
+    AdvancedTable
+  },
+  data() {
+    return {
+      searchVal: "",
+      selectedStatus: "ALL",
+      StatusOptions: [
+        { id: 1, name: "ALL", selected: true },
+        { id: 2, name: "ON HOLD", selected: false },
+        { id: 3, name: "IN THE LAB", selected: false },
+        { id: 4, name: "COMPLETE", selected: false },
+        { id: 5, name: "REJECTED/CANCELLED", selected: false }
+      ]
+    };
   },
   methods: {
     handleSearchBarInput(passedSearchVal) {
       this.searchVal = passedSearchVal;
     }
   }
-}
+};
 </script>

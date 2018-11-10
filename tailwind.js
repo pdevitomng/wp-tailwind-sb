@@ -167,7 +167,10 @@ module.exports = {
     sm: "576px",
     md: "768px",
     lg: "992px",
-    xl: "1200px"
+    xl: "1200px",
+    tablet: "576px",
+    laptop: "992px",
+    desktop: "1200px"
   },
 
   /*
@@ -485,6 +488,7 @@ module.exports = {
     "4/5": "80%",
     "1/6": "16.66667%",
     "5/6": "83.33333%",
+    "19/20": "95%",
     full: "100%",
     screen: "100vw"
   },
@@ -513,6 +517,7 @@ module.exports = {
     "4": "1rem",
     "5": "1.25rem",
     "6": "1.5rem",
+    "7": "1.75rem",
     "8": "2rem",
     "10": "2.5rem",
     "12": "3rem",
@@ -850,7 +855,7 @@ module.exports = {
     borderRadius: ["responsive"],
     borderStyle: ["responsive", "hover"],
     borderWidths: ["responsive", "hover"],
-    cursor: ["responsive","hover"],
+    cursor: ["responsive", "hover"],
     display: ["responsive"],
     flexbox: ["responsive"],
     float: ["responsive"],
@@ -865,7 +870,7 @@ module.exports = {
     minHeight: ["responsive"],
     minWidth: ["responsive"],
     negativeMargin: ["responsive"],
-    opacity: ["responsive","hover"],
+    opacity: ["responsive", "hover"],
     outline: ["focus"],
     overflow: ["responsive"],
     padding: ["responsive"],
@@ -877,7 +882,7 @@ module.exports = {
     svgStroke: [],
     tableLayout: ["responsive"],
     textAlign: ["responsive"],
-    textColors: ["responsive", "hover", "focus","placeholder"],
+    textColors: ["responsive", "hover", "focus", "placeholder"],
     textSizes: ["responsive"],
     textStyle: ["responsive", "hover", "focus"],
     tracking: ["responsive"],

@@ -6,6 +6,7 @@
         <p class="text-lg font-semibold">Check out our FAQ</p>
         <div class="px-1 py-4">
           <search-bar  search-placeholder="Search the FAQ"></search-bar>
+          <single-root-panel-bar :tree="treeData" class="mt-6"></single-root-panel-bar>
         </div>
       </div>
       <div class="w-1/2 px-6">
@@ -66,16 +67,45 @@
 <script>
 import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
+import SingleRootPanelBar from "@/components/SingleRootPanelBar";
 
 export default {
-    name: "reports",
-    components: {
-      Navbar,
-      SearchBar
-    }
-}
+  name: "contact-us",
+  components: {
+    Navbar,
+    SearchBar,
+    SingleRootPanelBar
+  },
+  data() {
+    return {
+      treeData: {
+        label: "Patients",
+        nodes: [
+          {
+            label: "Where can I view my patient's reports?",
+            nodes: [
+              {
+                label: "Go to the reports page"
+              },
+              {
+                label: "item1.2",
+                nodes: [
+                  {
+                    label: "item1.2.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            label: "I don't see my patient listed. What's the deal?"
+          }
+        ]
+      }
+    };
+  }
+};
 </script>
 
 <style>
-
 </style>

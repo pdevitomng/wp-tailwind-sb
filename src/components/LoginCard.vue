@@ -8,15 +8,15 @@
           <img class="block h-16 px-6 py-1 mx-auto" src="../assets/mng-logo-1.png" alt="">
         </div>
         <div class="">
-          <p class="text-grey-light font-medium font-md pt-4 pb-2 text-lg">
+          <p class="text-grey font-medium font-md pt-4 pb-4 text-lg">
             Welcome Back
           </p>
         </div>
         <div class="mb-4">
-            <input type="text" class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow" placeholder="Email">
+          <input type="text" class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow" placeholder="Email">
         </div>
         <div class="mb-4">
-            <input type="password" class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow" placeholder="Password">
+          <input type="password" class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow" placeholder="Password">
         </div>
 
         <div class="">
@@ -52,5 +52,5 @@
 <script>
 export default {
   name: "logincard"
-}
+};
 </script>
