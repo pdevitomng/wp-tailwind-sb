@@ -10,7 +10,7 @@
       <div v-for="status in StatusOptions" 
         :key=status.index  
         class="mx-4" 
-        :class="[status.name == selectedStatus ? 'font-medium border-b-2 border-green' : 'hover:cursor-pointer hover:opacity-50']" 
+        :class="[status.name == selectedStatus ? 'font-medium border-b-2 border-blue' : 'hover:cursor-pointer hover:opacity-50']" 
         @click= "selectedStatus=status.name">{{status.name}}</div>
     </div>
 

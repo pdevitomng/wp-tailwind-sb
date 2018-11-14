@@ -7,12 +7,12 @@
               <th class="border-t-2 border-b py-1 text-lg font-normal text-grey-darker"
                 v-for="column in allColumns"
                 :key=column.index
-                :class="column.columnHiddenClass"
+                :class="column.columnClass"
                 > {{column.displayText}}
               </th> 
             </tr>
             <tr role="filter-row" v-if="options.filterByColumn" class="border-b-2">
-              <th v-for="column in allColumns" :key=column.index class="bg-grey-lighter" :class="column.columnHiddenClass">
+              <th v-for="column in allColumns" :key=column.index class="bg-grey-lighter" :class="column.columnClass">
                 <div class="p-1 flex">
                   <input 
                     v-show="column.filterable"
@@ -60,7 +60,7 @@ export default {
           displayText: "Date Received",
           filterable: true,
           filterEnabled: true,
-          columnClass: "",
+          columnClass: "zeroLgOnly:hidden",
           columnHiddenClass: ""
         },
         {
@@ -68,7 +68,7 @@ export default {
           displayText: "Facility Sample Id",
           filterable: true,
           filterEnabled: true,
-          columnClass: "",
+          columnClass: "zeroLgOnly:hidden",
           columnHiddenClass: ""
         },
         {
@@ -76,7 +76,7 @@ export default {
           displayText: "MNG Sample Id",
           filterable: true,
           filterEnabled: true,
-          columnClass: "",
+          columnClass: "zeroLgOnly:hidden",
           columnHiddenClass: ""
         },
         {

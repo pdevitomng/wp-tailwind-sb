@@ -14,7 +14,7 @@
         </div>
 
         <div class="flex -mb-px mr-6">
-          <router-link exact-active-class="navbar-item-selected" tag="a" to="/reports" class="no-underline text-grey-dark flex item-center pt-6 pb-2 border-b-2 border-transparent hover:text-blue-light hover:border-blue-light" href="#">
+          <router-link exact-active-class="navbar-item-selected" tag="a" :to="{name:'reports'}" class="no-underline text-grey-dark flex item-center pt-6 pb-2 border-b-2 border-transparent hover:text-blue-light hover:border-blue-light" href="#">
             <!-- 
             1) https://github.com/dukestreetstudio/zondicons/tree/master/src
             2) click on one and select 'raw'
@@ -51,11 +51,12 @@
         </div>
 
         <div class="flex -mb-px mr-6">
-          <a class="no-underline text-grey-dark flex item-center pt-6 pb-2 border-b border-transparent hover:text-blue-light hover:border-blue-light" href="#">
-            Sign Out
+          <router-link exact-active-class="navbar-item-selected" tag="a" to="/" class="no-underline text-grey-dark flex item-center pt-6 pb-2 border-b-2 border-transparent hover:text-blue-light hover:border-blue-light" href="#">
+            <!-- <svg class="fill-current inline-block h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z"/></svg> -->
             <!-- notepad: https://material.io/tools/icons/?icon=launch&style=baseline -->
+            Sign Out
             <svg class="fill-current inline-block h-4 w-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

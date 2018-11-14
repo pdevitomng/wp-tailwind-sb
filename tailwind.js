@@ -170,7 +170,16 @@ module.exports = {
     xl: "1200px",
     tablet: "576px",
     laptop: "992px",
-    desktop: "1200px"
+    desktop: "1200px",
+    smOnly: { "min": "576px", "max": "767px" },
+    smMdOnly: { "min": "576px", "max": "991px" },
+    smLgOnly: { "min": "576px", "max": "1199px" },
+    mdOnly: { "min": "768px", "max": "991px" },
+    mdLgOnly: { "min": "768px", "max": "1199px" },
+    lgOnly: { "min": "992px", "max": "1199px" },
+    zeroSmOnly: { "min": "0px", "max": "767px" },
+    zeroMdOnly: { "min": "0px", "max": "991px" },
+    zeroLgOnly: { "min": "0px", "max": "1199px" }
   },
 
   /*
@@ -522,6 +531,7 @@ module.exports = {
     "10": "2.5rem",
     "12": "3rem",
     "16": "4rem",
+    "20": "5rem",
     "24": "6rem",
     "32": "8rem",
     "48": "12rem",
@@ -683,7 +693,12 @@ module.exports = {
     "16": "4rem",
     "20": "5rem",
     "24": "6rem",
-    "32": "8rem"
+    "32": "8rem",
+    "48": "12rem",
+    "64": "16rem",
+    "80": "18rem",
+    "96": "22rem",
+    "108": "26rem"
   },
 
   /*
